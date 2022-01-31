@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tasks</title>
+</head>
+
+<body>
+  <section>
+    <h1>Magzum Zubilya</h1>
+    <h4>1 - task</h4>
+    <script>
+      var name = "Zubilya";
+      var group = "CS-2122N";
+      document.write(name + "<br>" + group);
+    </script>
+  </section>
+  <p>---------------------------------------------------------------------------------------------------------------------------------</p>
+  <section>
+    <h4>2- task</h4>
+    <p id="dateTime"></p>
+    <script>
+      var today = new Date();
+      var day = today.getDay();
+      var year = today.getFullYear();
+      var date1 = today.getDate();
+      var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var dayList = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+      var time = new Date().toLocaleTimeString('en-US', {
+        hour: 'numeric'
+        , hour12: true
+        , minute: 'numeric'
+      });
+      var corMonth = new Date();
+      document.getElementById("dateTime").innerHTML = 'Year: ' + [year] + '<br> Today is: ' + dayList[day] + ' <br> Date: ' + [date1] + ' <br> Month: ' + month[corMonth.getMonth()] + '<br>' + "Current time is: " + time;
+    </script>
+  </section>
+  <p>---------------------------------------------------------------------------------------------------------------------------------</p>
+  <section>
+    <h4>3 - task</h4>
+    <script>
+      var date1, date2;
+      date1 = new Date("2022-6-15");
+      today = new Date("2022-1-31");
+      var timeDifference = date1.getTime() - today.getTime();
+      var daysDifference = timeDifference / (1000 * 60 * 60 * 24);
+      document.write("Days remained until graduation (15.06.2022) is <br>" + daysDifference + " days");
+    </script>
+  </section>
+  <p>---------------------------------------------------------------------------------------------------------------------------------</p>
+  <section>
+    <h4>4 - task</h4>
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
+    <script src="script.js"></script> 1st number:
+    <input type="number" value="" id="number">
+    <br>
+    <br> 2nd number:
+    <input type="number" value="" id="numbers">
+    <br>
+    <br>
+    <input type="submit" value="Multiply" onclick="return fun()">
+    <input type="submit" value="Divide" onclick="return fun2()">
+    <br>
+    <br> <b>The result is: </b>
+    <br>
+    <br> <span id="result"></span> </section>
+</body>
+
+</html>
